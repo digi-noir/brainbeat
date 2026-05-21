@@ -1110,10 +1110,93 @@
       .service-row { grid-template-columns: 50px 1fr; gap: 1rem; }
       .service-row-desc, .service-row-arrow { display: none; }
       .stats-inner { grid-template-columns: 1fr 1fr; }
+      .clients-grid { grid-template-columns: repeat(3, 1fr); }
       .team-grid { grid-template-columns: 1fr; }
       .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
       .form-row { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ── CLIENTS ── */
+    .clients {
+      padding: 7rem 5%;
+      background: var(--void);
+      border-top: 1px solid var(--border);
+    }
+
+    .clients-header {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+    }
+
+    .clients-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .client-item {
+      background: var(--void);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.8rem 2rem;
+      transition: background 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .client-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .client-item:hover { background: var(--surface); }
+    .client-item:hover::after { opacity: 1; }
+
+    .client-logo-img {
+      max-width: 140px;
+      max-height: 40px;
+      width: auto;
+      height: auto;
+      filter: grayscale(1) brightness(0.45);
+      opacity: 0.7;
+      transition: filter 0.3s, opacity 0.3s;
+      display: block;
+    }
+
+    .client-item:hover .client-logo-img {
+      filter: grayscale(1) brightness(0.85);
+      opacity: 1;
+    }
+
+    .client-placeholder {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      opacity: 0.45;
+      transition: opacity 0.3s, color 0.3s;
+      text-align: center;
+    }
+
+    .client-item:hover .client-placeholder {
+      opacity: 0.9;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 600px) {
+      .clients-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     /* ── SKIP LINK ── */
@@ -1302,6 +1385,29 @@
         <div class="stat-value"><span class="stat-unit">&lt;</span>8</div>
         <div class="stat-label">Active Engagements</div>
       </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <!-- To use real logos: replace each <span class="client-placeholder"> with <img class="client-logo-img" src="clients/company.svg" alt="Company Name" /> -->
+  <section class="clients" id="clients" aria-label="Our clients">
+    <div class="clients-header">
+      <div class="section-label">Our Clients</div>
+      <h2 class="section-title">Trusted by <em>Industry Leaders.</em></h2>
+    </div>
+    <div class="clients-grid">
+      <div class="client-item"><span class="client-placeholder">Ariston Capital</span></div>
+      <div class="client-item"><span class="client-placeholder">Veldra Health</span></div>
+      <div class="client-item"><span class="client-placeholder">Nexbridge Group</span></div>
+      <div class="client-item"><span class="client-placeholder">Corvin Logistics</span></div>
+      <div class="client-item"><span class="client-placeholder">Solari Ventures</span></div>
+      <div class="client-item"><span class="client-placeholder">Orinda Financial</span></div>
+      <div class="client-item"><span class="client-placeholder">Tessera Labs</span></div>
+      <div class="client-item"><span class="client-placeholder">Meridian Studio</span></div>
+      <div class="client-item"><span class="client-placeholder">Calloway Partners</span></div>
+      <div class="client-item"><span class="client-placeholder">Praxis Tech</span></div>
+      <div class="client-item"><span class="client-placeholder">Elara Brands</span></div>
+      <div class="client-item"><span class="client-placeholder">Northgate Advisory</span></div>
     </div>
   </section>
 
