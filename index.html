@@ -38,7 +38,7 @@
     "logo": "brain_and_gears_dark_executive.svg",
     "description": "Fractional C-Suite advisory for entrepreneurs, startups, and growing SMBs. Expert CFO, COO, CTO, CHRO, CMO, and CCO leadership without the full-time overhead.",
 
-    "email": "david@brainbeatllc.com",
+    "email": "david@brainbeat.com",
     "sameAs": ["https://www.linkedin.com/company/brainbeatllc"],
     "areaServed": "US",
     "serviceType": ["Fractional CFO", "Fractional COO", "Fractional CTO", "Fractional CHRO", "Fractional CMO", "Fractional CCO", "Executive Advisory",   "Business Strategy Consulting",
@@ -1091,6 +1091,31 @@
       .hero-logo-display { display: none; }
     }
 
+    @media (min-width: 700px) and (max-width: 900px) and (orientation: portrait) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10rem;
+      }
+      .hero-logo-display {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 351px;
+        height: 351px;
+        margin: 0 auto 2rem;
+        align-self: center;
+      }
+      .hero-content {
+        margin-top: 0;
+        text-align: center;
+        align-self: center;
+      }
+    }
+
     @media (max-height: 500px) and (orientation: landscape) {
       .hero h1 { font-size: clamp(1.75rem, 4.5vw, 4rem); }
       .hero-logo-display { width: 210px; height: 210px; }
@@ -1232,6 +1257,43 @@
     @media (prefers-reduced-motion: reduce) {
       .marquee-track { animation: none; }
       .hero-logo-display img { animation: none; opacity: 0.3; }
+    }
+
+    @media (orientation: landscape) and (max-height: 500px) {
+      .hero-logo-display {
+        display: block;
+        width: 150px;
+        height: 150px;
+        top: 45%;
+        left: auto;
+        right: 10%;
+        transform: translateY(-50%);
+      }
+    }
+
+    @media (max-width: 667px) and (orientation: landscape) {
+      .hero-logo-display {
+        width: 120px;
+        height: 120px;
+        top: 50%;
+        left: auto;
+        right: 3%;
+        transform: translateY(-50%);
+      }
+      .clients-grid { grid-template-columns: repeat(2, 1fr); }
+      .client-item { padding: 1.2rem 1rem; }
+      .client-logo-img {
+        max-width: 90px !important;
+        max-height: 30px !important;
+        transform: none !important;
+      }
+      .client-logo-img--zoom { transform: none !important; }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1180px) and (orientation: landscape) {
+      .hero-logo-display { transform: translate(5%, -54%); }
+      .hero-label { font-size: 0.465rem; }
+      .hero h1 { font-size: clamp(2.625rem, 6.75vw, 6rem); }
     }
   </style>
 </head>
