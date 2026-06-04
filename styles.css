@@ -724,16 +724,6 @@ nav {
   font-weight: 400;
   color: var(--text-muted);
   line-height: 1.5;
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-}
-
-.csuite-points p::before {
-  content: "—";
-  color: var(--accent);
-  font-size: 0.6rem;
-  flex-shrink: 0;
 }
 
 /* ── CONTACT ── */
