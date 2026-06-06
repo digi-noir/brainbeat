@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Six Financial Practices Every Growing Business Needs | BrainBeat LLC</title>
+    <meta
+      name="description"
+      content="Growing companies need reliable bookkeeping, invoicing, cash flow management, financial reporting, tax compliance, budgeting, and forecasting."
+    />
+    <meta name="author" content="BrainBeat LLC" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.brainbeatllc.com/insights/financial-practices-growing-business" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Syne+Mono&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* ── PRACTICE GRID ── */
+      .practices-outer {
+        padding: 4rem 5% 5rem;
+        background: var(--void);
+      }
+      .practices-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* ── PRACTICE CARD ── */
+      .pcard {
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid var(--accent);
+      }
+
+      /* icon + name block */
+      .pcard-top {
+        padding: 2.2rem 2rem 1.8rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface-mid);
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .pcard-icon-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 1.4rem;
+      }
+      .pcard-icon {
+        width: 68px;
+        height: 68px;
+        border: 1px solid var(--border-high);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent-mid);
+        flex-shrink: 0;
+      }
+      .pcard-num {
+        font-family: "Syne Mono", monospace;
+        font-size: 0.62rem;
+        color: var(--text-dim);
+        letter-spacing: 0.12em;
+        padding-top: 0.2rem;
+      }
+      .pcard-name {
+        font-family: "Fraunces", serif;
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: var(--text-pale);
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+      .pcard-def {
+        font-family: "Syne", sans-serif;
+        font-size: 0.835rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+      }
+
+      /* body sections */
+      .pcard-section {
+        padding: 1.3rem 2rem;
+        border-bottom: 1px solid var(--border);
+        flex: 1;
+      }
+      .pcard-section:last-child {
+        border-bottom: none;
+      }
+      .pcard-lbl {
+        font-family: "Syne", sans-serif;
+        font-size: 0.54rem;
+        font-weight: 600;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 0.7rem;
+      }
+      .pcard-lbl svg { flex-shrink: 0; opacity: 0.85; }
+      .pcard-p {
+        font-family: "Syne", sans-serif;
+        font-size: 0.845rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+      }
+      .pcard-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+      .pcard-list li {
+        font-family: "Syne", sans-serif;
+        font-size: 0.845rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start;
+      }
+      .pcard-list li::before {
+        content: "›";
+        color: var(--accent);
+        font-size: 1rem;
+        line-height: 1.5;
+        flex-shrink: 0;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        .practices-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 560px) {
+        .practices-grid { grid-template-columns: 1fr; }
+        .pcard-top { padding: 1.8rem 1.5rem 1.4rem; }
+        .pcard-section { padding: 1.1rem 1.5rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#article">Skip to main content</a>
+
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="../">
+        <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="nav-logo-img" />
+        <span class="nav-logo-text">BrainBeat LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../#about">About</a></li>
+        <li><a href="../#firm">Firm</a></li>
+        <li><a href="../#team">Services</a></li>
+        <li><a href="index.html" class="nav-link-active">Insights</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="../#contact">Begin the Conversation</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a class="nav-drawer-link" href="../#about">About</a>
+      <a class="nav-drawer-link" href="../#firm">Firm</a>
+      <a class="nav-drawer-link" href="../#team">Services</a>
+      <a class="nav-drawer-link" href="index.html">Insights</a>
+      <a class="nav-drawer-link" href="../#contact">Contact</a>
+      <a class="nav-drawer-cta" href="../#contact">Begin the Conversation</a>
+    </div>
+
+    <!-- ARTICLE -->
+    <main class="article-page" id="article">
+
+      <!-- HEADER -->
+      <header class="article-header">
+        <div class="article-header-inner">
+          <a class="article-back" href="index.html">← All Insights</a>
+          <p class="article-eyebrow">Financial Leadership</p>
+          <h1 class="article-h1">The Six Financial Practices<br /><em>Every Growing Business Needs</em></h1>
+          <p class="article-intro">
+            A growing business needs more than basic accounting. It needs financial practices that help leadership understand what is happening, anticipate what is coming, and make better decisions. Six practices matter most — and together they form the financial foundation every serious company must build.
+          </p>
+        </div>
+      </header>
+
+      <!-- SIX PRACTICES GRID -->
+      <div class="practices-outer">
+        <div class="practices-grid">
+
+          <!-- ── 01 BOOKKEEPING ── -->
+          <div class="pcard">
+            <div class="pcard-top">
+              <div class="pcard-icon-row">
+                <div class="pcard-icon">
+                  <!-- book-open icon -->
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0 3-3h7z"/>
+                  </svg>
+                </div>
+                <span class="pcard-num">01</span>
+              </div>
+              <h2 class="pcard-name">Bookkeeping</h2>
+              <p class="pcard-def">Accurate recording of day-to-day financial transactions, ensuring every number leadership relies on is trustworthy.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="pcard-p">Without reliable bookkeeping, no other financial decision can be trusted. Revenue figures, expense tracking, tax filings, and profitability analysis all depend on clean underlying data. Errors compound — fast.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What Good Looks Like
+              </p>
+              <ul class="pcard-list">
+                <li>Transactions categorized and reconciled on a regular schedule — not reconstructed at year-end</li>
+                <li>Clear separation of business and personal finances</li>
+                <li>Records reviewed by leadership at least quarterly, not just by accountants</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── 02 BILLING & INVOICING ── -->
+          <div class="pcard">
+            <div class="pcard-top">
+              <div class="pcard-icon-row">
+                <div class="pcard-icon">
+                  <!-- receipt/invoice icon -->
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16l3-2 3 2 3-2 3 2 3-2V4a2 2 0 0 0-2-2z"/>
+                    <line x1="16" y1="9" x2="8" y2="9"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="10" y1="17" x2="8" y2="17"/>
+                  </svg>
+                </div>
+                <span class="pcard-num">02</span>
+              </div>
+              <h2 class="pcard-name">Billing &amp; Invoicing</h2>
+              <p class="pcard-def">The process of requesting and collecting payment for goods and services delivered — turning completed work into actual cash.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="pcard-p">A company can do the work and still struggle if billing is delayed, inconsistent, or poorly structured. Collections discipline is as important as winning the revenue in the first place.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What Good Looks Like
+              </p>
+              <ul class="pcard-list">
+                <li>Invoices sent promptly after delivery with clear, unambiguous payment terms</li>
+                <li>Accounts receivable tracked actively with a defined follow-up schedule</li>
+                <li>Late payment policies established and enforced — not just written down</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── 03 CASH FLOW MANAGEMENT ── -->
+          <div class="pcard">
+            <div class="pcard-top">
+              <div class="pcard-icon-row">
+                <div class="pcard-icon">
+                  <!-- bidirectional flow / repeat icon -->
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="2" y1="8" x2="22" y2="8"/>
+                    <polyline points="16 2 22 8 16 14"/>
+                    <line x1="22" y1="16" x2="2" y2="16"/>
+                    <polyline points="8 22 2 16 8 10"/>
+                  </svg>
+                </div>
+                <span class="pcard-num">03</span>
+              </div>
+              <h2 class="pcard-name">Cash Flow Management</h2>
+              <p class="pcard-def">Monitoring the movement of cash in and out of the business to ensure sufficient funds are available when obligations come due.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="pcard-p">Profit and cash are not the same. A business can look profitable on paper while running short on cash. Cash flow visibility prevents surprises and enables confident decisions about hiring, spending, and timing.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What Good Looks Like
+              </p>
+              <ul class="pcard-list">
+                <li>Weekly cash position with a 4–8 week rolling forecast</li>
+                <li>Clear understanding of the timing gap between work delivered and cash received</li>
+                <li>Defined triggers for when financing or drawdown decisions need to be made</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── 04 FINANCIAL REPORTING ── -->
+          <div class="pcard">
+            <div class="pcard-top">
+              <div class="pcard-icon-row">
+                <div class="pcard-icon">
+                  <!-- bar chart icon -->
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"/>
+                    <line x1="12" y1="20" x2="12" y2="4"/>
+                    <line x1="6" y1="20" x2="6" y2="14"/>
+                    <line x1="2" y1="20" x2="22" y2="20"/>
+                  </svg>
+                </div>
+                <span class="pcard-num">04</span>
+              </div>
+              <h2 class="pcard-name">Financial Reporting</h2>
+              <p class="pcard-def">Creating and analyzing financial statements to understand business performance and give leadership the visibility to make better decisions.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="pcard-p">Reports should do more than satisfy compliance requirements. The right financial reports show leadership where the business is actually headed — not just where it has been. Useful reporting surfaces margins, trends, and risks early enough to act.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What Good Looks Like
+              </p>
+              <ul class="pcard-list">
+                <li>Monthly P&amp;L, balance sheet, and cash flow statement reviewed by leadership — not just filed</li>
+                <li>Reports that surface trends, not just point-in-time snapshots</li>
+                <li>KPIs selected to match what this specific business actually needs to track and act on</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── 05 TAX COMPLIANCE ── -->
+          <div class="pcard">
+            <div class="pcard-top">
+              <div class="pcard-icon-row">
+                <div class="pcard-icon">
+                  <!-- shield-check icon -->
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <polyline points="9 12 11 14 15 10"/>
+                  </svg>
+                </div>
+                <span class="pcard-num">05</span>
+              </div>
+              <h2 class="pcard-name">Tax Compliance</h2>
+              <p class="pcard-def">Ensuring adherence to applicable tax laws through timely filings, accurate records, and proactive planning throughout the year.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="pcard-p">Tax compliance is not just a year-end exercise. Penalties, interest, and surprise obligations can create significant cash pressure at the worst possible times. Proactive compliance reduces risk and keeps more options available.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What Good Looks Like
+              </p>
+              <ul class="pcard-list">
+                <li>Estimated tax payments made on a defined, calendared schedule</li>
+                <li>Clean, categorized records maintained year-round — not reconstructed in April</li>
+                <li>Tax strategy reviewed annually as business growth changes obligations and opportunities</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── 06 BUDGETING & FORECASTING ── -->
+          <div class="pcard">
+            <div class="pcard-top">
+              <div class="pcard-icon-row">
+                <div class="pcard-icon">
+                  <!-- trending-up icon -->
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                    <polyline points="17 6 23 6 23 12"/>
+                  </svg>
+                </div>
+                <span class="pcard-num">06</span>
+              </div>
+              <h2 class="pcard-name">Budgeting &amp; Forecasting</h2>
+              <p class="pcard-def">Creating a financial plan to estimate future revenue and expenses, then refining it continuously as new information becomes available.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="pcard-p">A budget sets expectations. A forecast adjusts them as reality unfolds. Together they help leadership make proactive decisions about hiring, investment, pricing, and cash — rather than reacting after margins or runway have already compressed.</p>
+            </div>
+
+            <div class="pcard-section">
+              <p class="pcard-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What Good Looks Like
+              </p>
+              <ul class="pcard-list">
+                <li>Annual budget built from the ground up with input from key departments</li>
+                <li>Forecasts updated monthly or quarterly as actuals diverge from plan</li>
+                <li>Budget-to-actual variance reviewed, explained, and acted on — not just noted</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /practices-grid -->
+      </div><!-- /practices-outer -->
+
+      <!-- CLOSING PROSE -->
+      <div style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="article-body" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+          <section>
+            <h2>These Practices Are Connected, Not Separate</h2>
+            <p>Bookkeeping feeds reporting. Reporting informs budgeting. Forecasting shapes cash flow decisions. Billing discipline determines how close actual cash flow tracks the forecast. Tax compliance depends on everything upstream being clean.</p>
+            <p>When one of these breaks down, the others become unreliable. The goal is not six separate tasks — it is one integrated system that gives leadership a clear, current, and trustworthy picture of the business.</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="article-cta-block">
+        <div class="article-cta-inner">
+          <p class="article-cta-label">Work With BrainBeat</p>
+          <p>Need help building the financial systems, reporting discipline, and decision-making habits that support business growth? BrainBeat helps leadership teams improve financial visibility, operations, and performance.</p>
+          <a class="btn-primary" href="../#team">Explore C-Suite Services</a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <a class="footer-logo" href="../">
+          <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="footer-logo-img" />
+          <span class="footer-logo-wordmark">BrainBeat LLC<span>.</span></span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#team">Services</a></li>
+          <li><a href="index.html">Insights</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+        <span class="footer-copy">© 2025 BrainBeat LLC &nbsp;·&nbsp; <a href="https://www.digi-noir.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; opacity: 0.5">Design by digi-noir.com</a></span>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("nav-hamburger");
+      const drawer = document.getElementById("nav-drawer");
+      hamburger.addEventListener("click", () => { hamburger.classList.toggle("open"); drawer.classList.toggle("open"); });
+      drawer.querySelectorAll("a").forEach((link) => { link.addEventListener("click", () => { hamburger.classList.remove("open"); drawer.classList.remove("open"); }); });
+    </script>
+  </body>
+</html>

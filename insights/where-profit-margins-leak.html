@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where Profit Margins Leak in Growing Companies | BrainBeat LLC</title>
+    <meta
+      name="description"
+      content="Profit margin leaks often come from pricing, cost structure, service mix, inefficient operations, and customer quality. Learn where growing companies lose profitability."
+    />
+    <meta name="author" content="BrainBeat LLC" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.brainbeatllc.com/insights/where-profit-margins-leak" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Syne+Mono&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* ── BUCKET VISUAL ── */
+      .bucket-section {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 4rem 5% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .bucket-sub {
+        font-family: "Syne", sans-serif;
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2.5rem;
+      }
+      .bucket-svg {
+        width: 220px;
+        height: auto;
+        overflow: visible;
+      }
+
+      /* ── LEAK LABELS BAR ── */
+      .leak-labels {
+        display: flex;
+        width: 100%;
+        border-top: 1px solid var(--border);
+        background: var(--surface-mid);
+      }
+      .leak-label-item {
+        flex: 1;
+        padding: 1rem 0.5rem;
+        border-right: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .leak-label-item:last-child { border-right: none; }
+      .leak-label-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent);
+        opacity: 0.75;
+      }
+      .leak-label-name {
+        font-family: "Syne", sans-serif;
+        font-size: 0.55rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        text-align: center;
+        line-height: 1.3;
+      }
+
+      /* ── LEAK CARDS GRID ── */
+      .leak-outer {
+        padding: 4rem 5% 5rem;
+        background: var(--void);
+      }
+      .leak-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .leak-card {
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* card header */
+      .leak-card-header {
+        padding: 1.8rem 1.8rem 1.4rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface-mid);
+        border-top: 2px solid var(--accent);
+      }
+      .leak-card-icon {
+        width: 48px;
+        height: 48px;
+        border: 1px solid var(--border-high);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent-mid);
+        margin-bottom: 1rem;
+      }
+      .leak-card-name {
+        font-family: "Fraunces", serif;
+        font-size: 1.15rem;
+        font-weight: 300;
+        color: var(--text-pale);
+        letter-spacing: -0.01em;
+        margin-bottom: 0.25rem;
+      }
+      .leak-card-tagline {
+        font-family: "Syne", sans-serif;
+        font-size: 0.78rem;
+        color: var(--text-dim);
+        line-height: 1.5;
+      }
+
+      /* card section */
+      .leak-section {
+        padding: 1.25rem 1.8rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .leak-section:last-child { border-bottom: none; flex: 1; }
+      .leak-section--warn { background: rgba(224, 96, 96, 0.04); }
+
+      .leak-lbl {
+        font-family: "Syne", sans-serif;
+        font-size: 0.55rem;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 0.7rem;
+      }
+      .leak-lbl svg { flex-shrink: 0; opacity: 0.9; }
+      .leak-lbl--warn { color: var(--red); }
+      .leak-lbl--warn svg { color: var(--red); }
+
+      .leak-p {
+        font-family: "Syne", sans-serif;
+        font-size: 0.845rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+      }
+      .leak-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+      .leak-list li {
+        font-family: "Syne", sans-serif;
+        font-size: 0.845rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start;
+      }
+      .leak-list li::before {
+        content: "›";
+        color: var(--accent);
+        font-size: 1rem;
+        line-height: 1.5;
+        flex-shrink: 0;
+      }
+      .leak-section--warn .leak-list li::before {
+        color: var(--red);
+        opacity: 0.75;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 960px) {
+        .leak-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 560px) {
+        .leak-grid { grid-template-columns: 1fr; }
+        .leak-label-name { font-size: 0.48rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#article">Skip to main content</a>
+
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="../">
+        <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="nav-logo-img" />
+        <span class="nav-logo-text">BrainBeat LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../#about">About</a></li>
+        <li><a href="../#firm">Firm</a></li>
+        <li><a href="../#team">Services</a></li>
+        <li><a href="index.html" class="nav-link-active">Insights</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="../#contact">Begin the Conversation</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a class="nav-drawer-link" href="../#about">About</a>
+      <a class="nav-drawer-link" href="../#firm">Firm</a>
+      <a class="nav-drawer-link" href="../#team">Services</a>
+      <a class="nav-drawer-link" href="index.html">Insights</a>
+      <a class="nav-drawer-link" href="../#contact">Contact</a>
+      <a class="nav-drawer-cta" href="../#contact">Begin the Conversation</a>
+    </div>
+
+    <!-- ARTICLE -->
+    <main class="article-page" id="article">
+
+      <!-- HEADER -->
+      <header class="article-header">
+        <div class="article-header-inner">
+          <a class="article-back" href="index.html">← All Insights</a>
+          <p class="article-eyebrow">Margin Improvement</p>
+          <h1 class="article-h1">Where Profit Margins<br />Leak in Growing Companies</h1>
+          <p class="article-intro">
+            A company can grow revenue and still become less profitable. Margin leaks are rarely dramatic — they accumulate quietly through pricing decisions, cost drift, low-margin work, operational waste, and the wrong customer mix. Revenue tells you how much business is coming in. Margin tells you how healthy that business really is.
+          </p>
+        </div>
+      </header>
+
+      <!-- BUCKET VISUAL -->
+      <div class="bucket-section">
+        <p class="bucket-sub">Five places profit quietly drains away</p>
+
+        <!-- SVG Bucket -->
+        <svg class="bucket-svg" viewBox="0 0 300 270" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Handle -->
+          <path d="M82 64 Q150 10 218 64" stroke="rgba(176,176,200,0.55)" stroke-width="1.8" stroke-linecap="round"/>
+
+          <!-- Bucket sides (trapezoid tapering inward bottom) -->
+          <line x1="62" y1="67" x2="90" y2="228" stroke="rgba(176,176,200,0.55)" stroke-width="1.5"/>
+          <line x1="238" y1="67" x2="210" y2="228" stroke="rgba(176,176,200,0.55)" stroke-width="1.5"/>
+
+          <!-- Top opening ellipse -->
+          <ellipse cx="150" cy="67" rx="88" ry="13" stroke="rgba(176,176,200,0.55)" stroke-width="1.5" fill="rgba(168,120,64,0.05)"/>
+
+          <!-- Bottom ellipse -->
+          <ellipse cx="150" cy="228" rx="60" ry="9" stroke="rgba(176,176,200,0.45)" stroke-width="1.5" fill="rgba(168,120,64,0.05)"/>
+
+          <!-- Water fill (profit inside bucket) -->
+          <path d="M80 148 Q150 157 220 148 L210 228 Q150 236 90 228 Z" fill="rgba(168,120,64,0.09)"/>
+
+          <!-- Water surface -->
+          <ellipse cx="150" cy="148" rx="70" ry="9" fill="rgba(168,120,64,0.14)" stroke="rgba(168,120,64,0.35)" stroke-width="0.8"/>
+
+          <!-- Above-water level dashes -->
+          <line x1="72" y1="108" x2="228" y2="108" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="6 4"/>
+
+          <!-- "Profit" italic label inside water -->
+          <text x="150" y="175" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="15" font-style="italic" font-weight="300" fill="rgba(168,120,64,0.72)" letter-spacing="1">Profit</text>
+
+          <!-- 5 drip teardrops at bucket base -->
+          <!-- positioned evenly along the bottom ellipse curve -->
+          <!-- Drip 1: x≈95 -->
+          <path d="M95 237 Q91 247 95 256 Q99 247 95 237 Z" fill="rgba(168,120,64,0.8)"/>
+          <!-- Drip 2: x≈118 -->
+          <path d="M118 237 Q114 247 118 256 Q122 247 118 237 Z" fill="rgba(168,120,64,0.8)"/>
+          <!-- Drip 3: x≈150 (center) -->
+          <path d="M150 237 Q146 247 150 256 Q154 247 150 237 Z" fill="rgba(168,120,64,0.8)"/>
+          <!-- Drip 4: x≈182 -->
+          <path d="M182 237 Q178 247 182 256 Q186 247 182 237 Z" fill="rgba(168,120,64,0.8)"/>
+          <!-- Drip 5: x≈205 -->
+          <path d="M205 237 Q201 247 205 256 Q209 247 205 237 Z" fill="rgba(168,120,64,0.8)"/>
+
+          <!-- Puddle below -->
+          <ellipse cx="150" cy="264" rx="52" ry="5" fill="rgba(168,120,64,0.1)"/>
+
+          <!-- Short drip lines from teardrops to puddle -->
+          <line x1="95" y1="256" x2="110" y2="264" stroke="rgba(168,120,64,0.3)" stroke-width="0.8"/>
+          <line x1="118" y1="256" x2="130" y2="264" stroke="rgba(168,120,64,0.3)" stroke-width="0.8"/>
+          <line x1="150" y1="256" x2="150" y2="264" stroke="rgba(168,120,64,0.3)" stroke-width="0.8"/>
+          <line x1="182" y1="256" x2="170" y2="264" stroke="rgba(168,120,64,0.3)" stroke-width="0.8"/>
+          <line x1="205" y1="256" x2="192" y2="264" stroke="rgba(168,120,64,0.3)" stroke-width="0.8"/>
+        </svg>
+
+        <!-- Five source labels below the bucket, matching drip positions conceptually -->
+        <div class="leak-labels">
+          <div class="leak-label-item">
+            <div class="leak-label-dot"></div>
+            <span class="leak-label-name">Pricing<br/>Decisions</span>
+          </div>
+          <div class="leak-label-item">
+            <div class="leak-label-dot"></div>
+            <span class="leak-label-name">Cost<br/>Structure</span>
+          </div>
+          <div class="leak-label-item">
+            <div class="leak-label-dot"></div>
+            <span class="leak-label-name">Service<br/>Mix</span>
+          </div>
+          <div class="leak-label-item">
+            <div class="leak-label-dot"></div>
+            <span class="leak-label-name">Operational<br/>Efficiency</span>
+          </div>
+          <div class="leak-label-item">
+            <div class="leak-label-dot"></div>
+            <span class="leak-label-name">Customer<br/>Quality</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FIVE LEAK CARDS -->
+      <div class="leak-outer">
+        <div class="leak-grid">
+
+          <!-- ── PRICING DECISIONS ── -->
+          <div class="leak-card">
+            <div class="leak-card-header">
+              <div class="leak-card-icon">
+                <!-- tag icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7" stroke-width="2.5"/>
+                </svg>
+              </div>
+              <h2 class="leak-card-name">Pricing Decisions</h2>
+              <p class="leak-card-tagline">Underpricing erodes margin with every sale</p>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                The Leak
+              </p>
+              <p class="leak-p">A price that doesn't reflect the true cost of delivery is a margin leak built into every transaction. As volume grows, underpricing scales the problem. The gap is usually invisible until margins have already compressed significantly.</p>
+            </div>
+
+            <div class="leak-section leak-section--warn">
+              <p class="leak-lbl leak-lbl--warn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Warning Signs
+              </p>
+              <ul class="leak-list">
+                <li>Margins declining even as revenue grows</li>
+                <li>Discounts offered reflexively without analysis</li>
+                <li>Wide profitability variation across similar-looking engagements</li>
+              </ul>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                What To Do
+              </p>
+              <ul class="leak-list">
+                <li>Build cost-to-serve models that capture labor, overhead, and support</li>
+                <li>Set pricing floors based on target margins, not competitor rates alone</li>
+                <li>Review pricing quarterly as cost structures evolve</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── COST STRUCTURE ── -->
+          <div class="leak-card">
+            <div class="leak-card-header">
+              <div class="leak-card-icon">
+                <!-- layers icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
+                </svg>
+              </div>
+              <h2 class="leak-card-name">Cost Structure</h2>
+              <p class="leak-card-tagline">Costs rise quietly while revenue gets the attention</p>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                The Leak
+              </p>
+              <p class="leak-p">Staff, software, vendors, compliance requirements, and management overhead expand naturally as a company grows. Without active oversight, these costs accumulate faster than the revenue they're supposed to support.</p>
+            </div>
+
+            <div class="leak-section leak-section--warn">
+              <p class="leak-lbl leak-lbl--warn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Warning Signs
+              </p>
+              <ul class="leak-list">
+                <li>Headcount growing faster than revenue output</li>
+                <li>Software subscriptions unchecked or overlapping</li>
+                <li>Indirect and overhead costs treated as fixed when they're not</li>
+              </ul>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                What To Do
+              </p>
+              <ul class="leak-list">
+                <li>Track cost-to-revenue ratios monthly, not just annually</li>
+                <li>Review vendor contracts and software spend on a defined schedule</li>
+                <li>Challenge each cost center to justify spend relative to business output</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── SERVICE MIX ── -->
+          <div class="leak-card">
+            <div class="leak-card-header">
+              <div class="leak-card-icon">
+                <!-- pie chart icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+                  <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+                </svg>
+              </div>
+              <h2 class="leak-card-name">Service Mix</h2>
+              <p class="leak-card-tagline">Not all revenue is created equal</p>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                The Leak
+              </p>
+              <p class="leak-p">Some work generates strong profit. Some barely breaks even. When the mix shifts toward low-margin offerings — through client demand, sales patterns, or inertia — overall profitability falls even if top-line revenue grows.</p>
+            </div>
+
+            <div class="leak-section leak-section--warn">
+              <p class="leak-lbl leak-lbl--warn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Warning Signs
+              </p>
+              <ul class="leak-list">
+                <li>High revenue but flat or declining profit</li>
+                <li>Some clients consuming a disproportionate share of attention</li>
+                <li>Scope expansion happening without corresponding pricing adjustments</li>
+              </ul>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                What To Do
+              </p>
+              <ul class="leak-list">
+                <li>Track margin by client, offering, or project type — not just total revenue</li>
+                <li>Deliberately steer sales effort toward highest-margin work</li>
+                <li>Re-price or restructure low-margin relationships to reflect their true cost</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── OPERATIONAL EFFICIENCY ── -->
+          <div class="leak-card">
+            <div class="leak-card-header">
+              <div class="leak-card-icon">
+                <!-- tool/wrench icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <h2 class="leak-card-name">Operational Efficiency</h2>
+              <p class="leak-card-tagline">Manual work and process gaps burn margin invisibly</p>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                The Leak
+              </p>
+              <p class="leak-p">Repeated manual work, unclear handoffs, rework cycles, and weak internal systems consume time that isn't reflected in pricing. Small daily friction compounds — what feels like a minor inefficiency becomes a significant annual cost.</p>
+            </div>
+
+            <div class="leak-section leak-section--warn">
+              <p class="leak-lbl leak-lbl--warn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Warning Signs
+              </p>
+              <ul class="leak-list">
+                <li>Same problems recurring without resolution</li>
+                <li>High management overhead relative to output produced</li>
+                <li>Frequent exceptions to standard processes; known bottlenecks nobody owns</li>
+              </ul>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                What To Do
+              </p>
+              <ul class="leak-list">
+                <li>Build SOPs for any process that repeats more than twice</li>
+                <li>Identify and eliminate the top sources of rework, error, and delay</li>
+                <li>Assign operational ownership to specific leaders with clear accountability</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── CUSTOMER QUALITY ── -->
+          <div class="leak-card">
+            <div class="leak-card-header">
+              <div class="leak-card-icon">
+                <!-- user-x icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="8.5" cy="7" r="4"/>
+                  <line x1="18" y1="8" x2="23" y2="13"/>
+                  <line x1="23" y1="8" x2="18" y2="13"/>
+                </svg>
+              </div>
+              <h2 class="leak-card-name">Customer Quality</h2>
+              <p class="leak-card-tagline">Some customers consume more than they contribute</p>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                The Leak
+              </p>
+              <p class="leak-p">Not all revenue is equally healthy. Some clients require extensive customization, pay slowly, demand constant attention, or use more resources than was ever priced in. They appear on the top line while quietly draining the bottom.</p>
+            </div>
+
+            <div class="leak-section leak-section--warn">
+              <p class="leak-lbl leak-lbl--warn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Warning Signs
+              </p>
+              <ul class="leak-list">
+                <li>High-revenue clients with low or negative profit margins</li>
+                <li>A small number of accounts generating disproportionate support burden</li>
+                <li>Slow collections and frequent out-of-scope requests creating cash pressure</li>
+              </ul>
+            </div>
+
+            <div class="leak-section">
+              <p class="leak-lbl">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                What To Do
+              </p>
+              <ul class="leak-list">
+                <li>Calculate profit-per-client, not just revenue-per-client</li>
+                <li>Define clear service tier boundaries and enforce them consistently</li>
+                <li>Exit or re-price relationships that consistently cost more than they generate</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /leak-grid -->
+      </div><!-- /leak-outer -->
+
+      <!-- CLOSING PROSE -->
+      <div style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="article-body" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+          <section>
+            <h2>Fixing the Leaks Requires Visibility First</h2>
+            <p>Most margin leaks don't get fixed because they're not clearly visible. Leadership knows the profit numbers are lower than they should be, but the root causes are spread across pricing, costs, work mix, operations, and customer relationships simultaneously.</p>
+            <p>The starting point is better financial and operational reporting — not more revenue. Once you can see where profit is being created and where it's being lost, fixing the leaks becomes a matter of decisions, not luck.</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="article-cta-block">
+        <div class="article-cta-inner">
+          <p class="article-cta-label">Work With BrainBeat</p>
+          <p>Need help identifying where margin is leaking and building the financial visibility and operational discipline to stop it? BrainBeat helps leadership teams improve reporting, execution, and business performance.</p>
+          <a class="btn-primary" href="../#team">Explore C-Suite Services</a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <a class="footer-logo" href="../">
+          <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="footer-logo-img" />
+          <span class="footer-logo-wordmark">BrainBeat LLC<span>.</span></span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#team">Services</a></li>
+          <li><a href="index.html">Insights</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+        <span class="footer-copy">© 2025 BrainBeat LLC &nbsp;·&nbsp; <a href="https://www.digi-noir.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; opacity: 0.5">Design by digi-noir.com</a></span>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("nav-hamburger");
+      const drawer = document.getElementById("nav-drawer");
+      hamburger.addEventListener("click", () => { hamburger.classList.toggle("open"); drawer.classList.toggle("open"); });
+      drawer.querySelectorAll("a").forEach((link) => { link.addEventListener("click", () => { hamburger.classList.remove("open"); drawer.classList.remove("open"); }); });
+    </script>
+  </body>
+</html>

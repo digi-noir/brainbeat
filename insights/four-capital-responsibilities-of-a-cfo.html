@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Four Capital Responsibilities of a CFO | BrainBeat LLC</title>
+    <meta
+      name="description"
+      content="CFO leadership spans four capital responsibilities: capital sourcing, capital allocation, capital reporting, and capital management — each with distinct focus areas and tasks."
+    />
+    <meta name="author" content="BrainBeat LLC" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.brainbeatllc.com/insights/four-capital-responsibilities-of-a-cfo" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Syne+Mono&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* ── FOUR-COLUMN CAPITAL GRID ── */
+      .capital-outer {
+        padding: 3.5rem 5% 5rem;
+        background: var(--void);
+      }
+      .capital-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      /* ── COLUMN ── */
+      .capital-col {
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid var(--accent);
+      }
+      .capital-col-header {
+        padding: 1.7rem 1.5rem 1.4rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface-mid);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .capital-col-icon {
+        color: var(--accent-mid);
+        margin-bottom: 0.2rem;
+      }
+      .capital-col-num {
+        font-family: "Syne Mono", monospace;
+        font-size: 0.54rem;
+        letter-spacing: 0.22em;
+        color: var(--text-dim);
+        text-transform: uppercase;
+      }
+      .capital-col-name {
+        font-family: "Fraunces", serif;
+        font-size: 1.05rem;
+        font-weight: 300;
+        color: var(--text-pale);
+        letter-spacing: -0.01em;
+        line-height: 1.25;
+      }
+
+      /* ── SECTION WITHIN COLUMN ── */
+      .capital-section {
+        padding: 1.15rem 1.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .capital-section:last-child {
+        border-bottom: none;
+        flex: 1;
+      }
+      .capital-lbl {
+        font-family: "Syne", sans-serif;
+        font-size: 0.52rem;
+        font-weight: 700;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin-bottom: 0.75rem;
+      }
+      .capital-lbl svg { flex-shrink: 0; opacity: 0.85; }
+
+      /* KEY AREAS — tag chips */
+      .capital-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+      }
+      .capital-tag {
+        font-family: "Syne Mono", monospace;
+        font-size: 0.62rem;
+        letter-spacing: 0.04em;
+        color: var(--text-muted);
+        border: 1px solid var(--border-high);
+        padding: 0.1rem 0.45rem;
+        line-height: 1.7;
+      }
+
+      /* FOCUS — italic fraunces statement */
+      .capital-focus {
+        font-family: "Fraunces", serif;
+        font-size: 0.9rem;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--text-pale);
+        line-height: 1.6;
+      }
+
+      /* TASKS — bulleted list */
+      .capital-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .capital-list li {
+        font-family: "Syne", sans-serif;
+        font-size: 0.835rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        display: flex;
+        gap: 0.45rem;
+        align-items: flex-start;
+      }
+      .capital-list li::before {
+        content: "›";
+        color: var(--accent);
+        font-size: 1rem;
+        line-height: 1.55;
+        flex-shrink: 0;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 1050px) {
+        .capital-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 560px) {
+        .capital-grid { grid-template-columns: 1fr; }
+        .capital-col {
+          border-top: none;
+          border-left: 2px solid var(--accent);
+        }
+        .capital-outer { padding: 2.5rem 5% 4rem; }
+        .capital-col-header { padding: 1.4rem 1.3rem 1.1rem; }
+        .capital-section { padding: 1rem 1.3rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#article">Skip to main content</a>
+
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="../">
+        <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="nav-logo-img" />
+        <span class="nav-logo-text">BrainBeat LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../#about">About</a></li>
+        <li><a href="../#firm">Firm</a></li>
+        <li><a href="../#team">Services</a></li>
+        <li><a href="index.html" class="nav-link-active">Insights</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="../#contact">Begin the Conversation</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a class="nav-drawer-link" href="../#about">About</a>
+      <a class="nav-drawer-link" href="../#firm">Firm</a>
+      <a class="nav-drawer-link" href="../#team">Services</a>
+      <a class="nav-drawer-link" href="index.html">Insights</a>
+      <a class="nav-drawer-link" href="../#contact">Contact</a>
+      <a class="nav-drawer-cta" href="../#contact">Begin the Conversation</a>
+    </div>
+
+    <!-- ARTICLE -->
+    <main class="article-page" id="article">
+
+      <!-- HEADER -->
+      <header class="article-header">
+        <div class="article-header-inner">
+          <a class="article-back" href="index.html">← All Insights</a>
+          <p class="article-eyebrow">Capital &amp; Reporting</p>
+          <h1 class="article-h1">The Four Capital Responsibilities<br /><em>of a CFO</em></h1>
+          <p class="article-intro">
+            Capital is more than money in the bank. It is the fuel that supports growth, operations, investment, and resilience. CFO-level leadership spans four interconnected responsibilities — each with its own focus, key areas, and tasks — that together form the financial backbone of a healthy organization.
+          </p>
+        </div>
+      </header>
+
+      <!-- FOUR-COLUMN CAPITAL MATRIX -->
+      <div class="capital-outer">
+        <div class="capital-grid">
+
+          <!-- ── 01 CAPITAL SOURCING ── -->
+          <div class="capital-col">
+            <div class="capital-col-header">
+              <div class="capital-col-icon">
+                <!-- filter/funnel: converging capital inward -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                </svg>
+              </div>
+              <span class="capital-col-num">01 · Capital</span>
+              <span class="capital-col-name">Sourcing</span>
+            </div>
+
+            <!-- Key Areas -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                Key Areas
+              </p>
+              <div class="capital-tags">
+                <span class="capital-tag">Fundraising</span>
+                <span class="capital-tag">Debt</span>
+                <span class="capital-tag">Equity</span>
+                <span class="capital-tag">WACC</span>
+                <span class="capital-tag">Investors</span>
+                <span class="capital-tag">Banking</span>
+              </div>
+            </div>
+
+            <!-- Focus -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                Focus
+              </p>
+              <p class="capital-focus">Securing the right type of capital, at the right cost, at the right time — without compromising financial flexibility.</p>
+            </div>
+
+            <!-- Tasks -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Tasks
+              </p>
+              <ul class="capital-list">
+                <li>Lead fundraising efforts and manage relationships with investors, lenders, and banking partners</li>
+                <li>Evaluate, structure, and negotiate debt, equity, and hybrid financing options</li>
+                <li>Continuously optimize capital structure and minimize the weighted average cost of capital (WACC)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── 02 CAPITAL ALLOCATION ── -->
+          <div class="capital-col">
+            <div class="capital-col-header">
+              <div class="capital-col-icon">
+                <!-- pie-chart: distributing capital outward -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+                  <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+                </svg>
+              </div>
+              <span class="capital-col-num">02 · Capital</span>
+              <span class="capital-col-name">Allocation</span>
+            </div>
+
+            <!-- Key Areas -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                Key Areas
+              </p>
+              <div class="capital-tags">
+                <span class="capital-tag">ROI</span>
+                <span class="capital-tag">Long-term Strategy</span>
+                <span class="capital-tag">Growth</span>
+                <span class="capital-tag">Capital Efficiency</span>
+              </div>
+            </div>
+
+            <!-- Focus -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                Focus
+              </p>
+              <p class="capital-focus">Directing capital where it creates the most value — balancing short-term needs against long-term strategic priorities.</p>
+            </div>
+
+            <!-- Tasks -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Tasks
+              </p>
+              <ul class="capital-list">
+                <li>Allocate funds across R&amp;D, operations, hiring, and growth initiatives based on strategic priority</li>
+                <li>Prioritize investments with the strongest risk-adjusted return on capital deployed</li>
+                <li>Ensure every significant spending decision connects back to long-term business strategy</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── 03 CAPITAL REPORTING ── -->
+          <div class="capital-col">
+            <div class="capital-col-header">
+              <div class="capital-col-icon">
+                <!-- bar chart: performance visibility -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                  <line x1="2" y1="20" x2="22" y2="20"/>
+                </svg>
+              </div>
+              <span class="capital-col-num">03 · Capital</span>
+              <span class="capital-col-name">Reporting</span>
+            </div>
+
+            <!-- Key Areas -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                Key Areas
+              </p>
+              <div class="capital-tags">
+                <span class="capital-tag">Financial Statements</span>
+                <span class="capital-tag">Compliance</span>
+                <span class="capital-tag">KPIs</span>
+                <span class="capital-tag">Transparency</span>
+              </div>
+            </div>
+
+            <!-- Focus -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                Focus
+              </p>
+              <p class="capital-focus">Delivering accurate, timely financial insight to leadership — so that decisions are made on data, not instinct.</p>
+            </div>
+
+            <!-- Tasks -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Tasks
+              </p>
+              <ul class="capital-list">
+                <li>Produce accurate, complete financial statements on a reliable, defined schedule</li>
+                <li>Ensure compliance with applicable accounting standards, regulatory requirements, and audit obligations</li>
+                <li>Report on KPIs and performance metrics that directly support executive decision-making</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ── 04 CAPITAL MANAGEMENT ── -->
+          <div class="capital-col">
+            <div class="capital-col-header">
+              <div class="capital-col-icon">
+                <!-- shield: protecting financial resilience -->
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <span class="capital-col-num">04 · Capital</span>
+              <span class="capital-col-name">Management</span>
+            </div>
+
+            <!-- Key Areas -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                Key Areas
+              </p>
+              <div class="capital-tags">
+                <span class="capital-tag">Liquidity</span>
+                <span class="capital-tag">Risk</span>
+                <span class="capital-tag">Cash Flow</span>
+                <span class="capital-tag">Working Capital</span>
+              </div>
+            </div>
+
+            <!-- Focus -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                Focus
+              </p>
+              <p class="capital-focus">Protecting the company's financial resilience — keeping it liquid, operationally stable, and appropriately risk-aware.</p>
+            </div>
+
+            <!-- Tasks -->
+            <div class="capital-section">
+              <p class="capital-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Tasks
+              </p>
+              <ul class="capital-list">
+                <li>Manage liquidity and cash flow in alignment with operating needs and strategic commitments</li>
+                <li>Optimize working capital — receivables, payables, and inventory — for efficiency and stability</li>
+                <li>Oversee risk management across FX, interest rate, credit, and operational exposures</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /capital-grid -->
+      </div><!-- /capital-outer -->
+
+      <!-- CLOSING PROSE -->
+      <div style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="article-body" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+          <section>
+            <h2>The Four Work Together</h2>
+            <p>Capital sourcing, allocation, reporting, and management are not independent functions. They are four dimensions of one connected system. Sourcing determines what capital is available. Allocation decides where it goes. Reporting shows whether it is working. Management protects the organization's ability to keep operating and investing as conditions change.</p>
+            <p>Companies that treat these as separate activities — or that neglect any one of them — tend to find that the gaps show up in the worst moments. A CFO's role is to keep all four aligned with strategy and with each other.</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="article-cta-block">
+        <div class="article-cta-inner">
+          <p class="article-cta-label">Work With BrainBeat</p>
+          <p>Need help building a more disciplined capital framework — across sourcing, allocation, reporting, and management? BrainBeat helps leadership teams connect financial decisions to strategy and long-term business health.</p>
+          <a class="btn-primary" href="../#team">Explore C-Suite Services</a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <a class="footer-logo" href="../">
+          <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="footer-logo-img" />
+          <span class="footer-logo-wordmark">BrainBeat LLC<span>.</span></span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#team">Services</a></li>
+          <li><a href="index.html">Insights</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+        <span class="footer-copy">© 2025 BrainBeat LLC &nbsp;·&nbsp; <a href="https://www.digi-noir.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; opacity: 0.5">Design by digi-noir.com</a></span>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("nav-hamburger");
+      const drawer = document.getElementById("nav-drawer");
+      hamburger.addEventListener("click", () => { hamburger.classList.toggle("open"); drawer.classList.toggle("open"); });
+      drawer.querySelectorAll("a").forEach((link) => { link.addEventListener("click", () => { hamburger.classList.remove("open"); drawer.classList.remove("open"); }); });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turning Strategy Into Execution | BrainBeat LLC</title>
+    <meta
+      name="description"
+      content="Six steps to turn strategy into execution: clarify priorities, assign ownership, set timelines, define metrics, build accountability rhythms, and adapt."
+    />
+    <meta name="author" content="BrainBeat LLC" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.brainbeatllc.com/insights/turning-strategy-into-execution" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Syne+Mono&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* ── RING DIAGRAM ── */
+      .ring-section {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 2.5rem 5% 1.5rem;
+      }
+      .ring-svg-wrap {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .ring-svg-wrap svg { width: 100%; height: auto; display: block; }
+
+      /* ── STEP CARDS ── */
+      .exec-outer {
+        padding: 3.5rem 5% 5rem;
+        background: var(--void);
+      }
+      .exec-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .exec-card {
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid var(--accent);
+      }
+      .exec-card-top {
+        padding: 1.8rem 2rem 1.4rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface-mid);
+      }
+      .exec-num {
+        font-family: "Syne Mono", monospace;
+        font-size: 0.58rem;
+        letter-spacing: 0.22em;
+        color: var(--accent);
+        display: block;
+        margin-bottom: 0.35rem;
+      }
+      .exec-title {
+        font-family: "Fraunces", serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: var(--text-pale);
+        letter-spacing: -0.01em;
+        margin-bottom: 0.5rem;
+      }
+      .exec-tagline {
+        font-family: "Syne", sans-serif;
+        font-size: 0.83rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        font-style: italic;
+      }
+      .exec-section {
+        padding: 1.2rem 2rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .exec-section:last-child { border-bottom: none; flex: 1; }
+      .exec-lbl {
+        font-family: "Syne", sans-serif;
+        font-size: 0.52rem;
+        font-weight: 700;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin-bottom: 0.7rem;
+      }
+      .exec-lbl svg { flex-shrink: 0; opacity: 0.85; }
+      .exec-p {
+        font-family: "Syne", sans-serif;
+        font-size: 0.835rem;
+        color: var(--text-muted);
+        line-height: 1.72;
+      }
+      .exec-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .exec-list li {
+        font-family: "Syne", sans-serif;
+        font-size: 0.835rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        display: flex;
+        gap: 0.45rem;
+        align-items: flex-start;
+      }
+      .exec-list li::before {
+        content: "›";
+        color: var(--accent);
+        font-size: 1rem;
+        line-height: 1.55;
+        flex-shrink: 0;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        .exec-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 560px) {
+        .exec-grid { grid-template-columns: 1fr; }
+        .exec-card { border-top: none; border-left: 2px solid var(--accent); }
+        .exec-card-top { padding: 1.4rem 1.5rem 1.1rem; }
+        .exec-section { padding: 1rem 1.5rem; }
+        .ring-section { padding: 2rem 5% 1rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#article">Skip to main content</a>
+
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="../">
+        <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="nav-logo-img" />
+        <span class="nav-logo-text">BrainBeat LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../#about">About</a></li>
+        <li><a href="../#firm">Firm</a></li>
+        <li><a href="../#team">Services</a></li>
+        <li><a href="index.html" class="nav-link-active">Insights</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="../#contact">Begin the Conversation</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a class="nav-drawer-link" href="../#about">About</a>
+      <a class="nav-drawer-link" href="../#firm">Firm</a>
+      <a class="nav-drawer-link" href="../#team">Services</a>
+      <a class="nav-drawer-link" href="index.html">Insights</a>
+      <a class="nav-drawer-link" href="../#contact">Contact</a>
+      <a class="nav-drawer-cta" href="../#contact">Begin the Conversation</a>
+    </div>
+
+    <!-- ARTICLE -->
+    <main class="article-page" id="article">
+
+      <!-- HEADER -->
+      <header class="article-header">
+        <div class="article-header-inner">
+          <a class="article-back" href="index.html">← All Insights</a>
+          <p class="article-eyebrow">Operational Execution</p>
+          <h1 class="article-h1">Turning Strategy<br /><em>Into Execution</em></h1>
+          <p class="article-intro">
+            Many companies do not fail because they lack good strategy. They fail because the strategy never becomes consistent execution. Six connected steps — from clarifying priorities to adapting as reality unfolds — turn strategic intent into results.
+          </p>
+        </div>
+      </header>
+
+      <!-- RING DIAGRAM -->
+      <div class="ring-section">
+        <div class="ring-svg-wrap">
+          <!--
+            Circular arc-ring diagram.
+            6 nodes placed clockwise at 60° intervals starting at 12 o'clock (270° in SVG):
+              01: 270° → (500, 140)    [top]
+              02: 330° → (660, 233)    [upper-right]
+              03:  30° → (660, 418)    [lower-right]
+              04:  90° → (500, 510)    [bottom]
+              05: 150° → (340, 418)    [lower-left]
+              06: 210° → (340, 233)    [upper-left]
+            Arcs at r=185 connect adjacent nodes (clockwise sweep=1).
+            Node circles (r=22) sit on top, visually "locking" each junction.
+          -->
+          <svg viewBox="0 0 1000 650" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+            <!-- faint background rings -->
+            <circle cx="500" cy="325" r="210" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="3 7"/>
+            <circle cx="500" cy="325" r="115" fill="none" stroke="var(--border-high)" stroke-width="0.5" stroke-dasharray="2 5"/>
+
+            <!-- 6 clockwise arc segments at r=185 -->
+            <!-- arc stroke-width=5 makes a bold ring; each arc's endpoints are covered by node circles -->
+            <path d="M 500,140 A 185,185 0 0,1 660,233" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+            <path d="M 660,233 A 185,185 0 0,1 660,418" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+            <path d="M 660,418 A 185,185 0 0,1 500,510" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+            <path d="M 500,510 A 185,185 0 0,1 340,418" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+            <path d="M 340,418 A 185,185 0 0,1 340,233" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+            <path d="M 340,233 A 185,185 0 0,1 500,140" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" opacity="0.75"/>
+
+            <!-- central circle -->
+            <circle cx="500" cy="325" r="100" fill="var(--surface-mid)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="500" y="307" text-anchor="middle" font-family="Fraunces, serif" font-size="13" font-weight="300" font-style="italic" fill="var(--text-pale)">Strategy to</text>
+            <text x="500" y="326" text-anchor="middle" font-family="Fraunces, serif" font-size="13" font-weight="300" font-style="italic" fill="var(--text-pale)">Execution</text>
+            <text x="500" y="345" text-anchor="middle" font-family="Syne Mono, monospace" font-size="10" fill="var(--text-dim)" letter-spacing="2">6-STEP CYCLE</text>
+
+            <!-- node circles (drawn after arcs so they sit on top) -->
+            <circle cx="500" cy="140" r="22" fill="var(--surface-mid)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="660" cy="233" r="22" fill="var(--surface-mid)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="660" cy="418" r="22" fill="var(--surface-mid)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="500" cy="510" r="22" fill="var(--surface-mid)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="340" cy="418" r="22" fill="var(--surface-mid)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="340" cy="233" r="22" fill="var(--surface-mid)" stroke="var(--accent)" stroke-width="1.5"/>
+
+            <!-- node numbers -->
+            <text x="500" cy="140" y="140" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="12" fill="var(--accent)">01</text>
+            <text x="660" cy="233" y="233" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="12" fill="var(--accent)">02</text>
+            <text x="660" cy="418" y="418" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="12" fill="var(--accent)">03</text>
+            <text x="500" cy="510" y="510" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="12" fill="var(--accent)">04</text>
+            <text x="340" cy="418" y="418" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="12" fill="var(--accent)">05</text>
+            <text x="340" cy="233" y="233" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="12" fill="var(--accent)">06</text>
+
+            <!-- step labels (at r≈230 from center) -->
+            <!-- 01 top -->
+            <text x="500" y="80"  text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Clarify</text>
+            <text x="500" y="98"  text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Priorities</text>
+            <!-- 02 upper-right -->
+            <text x="705" y="208" text-anchor="start"  font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Assign Clear</text>
+            <text x="705" y="226" text-anchor="start"  font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Ownership</text>
+            <!-- 03 lower-right -->
+            <text x="705" y="432" text-anchor="start"  font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Set Timelines</text>
+            <text x="705" y="450" text-anchor="start"  font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">&amp; Milestones</text>
+            <!-- 04 bottom -->
+            <text x="500" y="552" text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Define the</text>
+            <text x="500" y="570" text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Right Metrics</text>
+            <!-- 05 lower-left -->
+            <text x="295" y="432" text-anchor="end"    font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Accountability</text>
+            <text x="295" y="450" text-anchor="end"    font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Rhythms</text>
+            <!-- 06 upper-left -->
+            <text x="295" y="208" text-anchor="end"    font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Adapt &amp;</text>
+            <text x="295" y="226" text-anchor="end"    font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Course-Correct</text>
+
+            <!-- clockwise arrow indicator (small at center-bottom of central circle) -->
+            <text x="500" y="432" text-anchor="middle" font-family="Syne Mono, monospace" font-size="11" fill="var(--text-dim)" opacity="0.5">↻</text>
+
+          </svg>
+        </div>
+      </div>
+
+      <!-- SIX STEP CARDS -->
+      <div class="exec-outer">
+        <div class="exec-grid">
+
+          <!-- 01 -->
+          <div class="exec-card">
+            <div class="exec-card-top">
+              <span class="exec-num">Step 01</span>
+              <h2 class="exec-title">Clarify Priorities</h2>
+              <p class="exec-tagline">Strategy generates too many possible initiatives. Execution requires choosing which few matter most — right now.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="exec-p">Leadership time and organizational attention are finite. Spreading effort across too many priorities ensures mediocre progress on all of them. Ruthless focus on the critical few is what separates companies that execute from companies that try.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="exec-list">
+                <li>Identify the 3–5 initiatives that will move the strategy forward most meaningfully this quarter</li>
+                <li>Test each "priority": does it have a clear owner and a measurable outcome? If not, it is not a real priority</li>
+                <li>Explicitly defer or eliminate the rest — passive neglect is not a substitute for a real decision</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="exec-card">
+            <div class="exec-card-top">
+              <span class="exec-num">Step 02</span>
+              <h2 class="exec-title">Assign Clear Ownership</h2>
+              <p class="exec-tagline">Shared accountability is no accountability. Every initiative needs one person who is responsible for its progress.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="exec-p">Without a named owner, initiatives drift. Committees discuss; individuals execute. Ownership means there is one person who coordinates others, resolves blockers, and is accountable for reporting progress — not a team, not a committee.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="exec-list">
+                <li>Assign a single named owner to each priority initiative before any work begins</li>
+                <li>Define what ownership means: coordinating others, surfacing blockers, reporting status at each review</li>
+                <li>Make ownership visible across the leadership team — everyone should know who owns what</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="exec-card">
+            <div class="exec-card-top">
+              <span class="exec-num">Step 03</span>
+              <h2 class="exec-title">Set Timelines &amp; Milestones</h2>
+              <p class="exec-tagline">A strategy needs deadlines. Without them, progress is open-ended and impossible to track in real time.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="exec-p">Milestones give leadership early warning when an initiative is off track. Quarterly checkpoints are long enough to show real progress and short enough to course-correct before problems compound into larger setbacks.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="exec-list">
+                <li>Break major initiatives into 30-60-90 day milestones with clear completion criteria</li>
+                <li>Set quarterly review checkpoints where progress is formally assessed against plan</li>
+                <li>Define "on track" in advance — not at the review meeting, when the conversation becomes defensive</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="exec-card">
+            <div class="exec-card-top">
+              <span class="exec-num">Step 04</span>
+              <h2 class="exec-title">Define the Right Metrics</h2>
+              <p class="exec-tagline">Metrics should show whether you are moving toward the goal — not just whether the team is staying busy.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="exec-p">Too many dashboards create noise. Too few metrics create blind spots. The right metrics are simple, directly tied to the goal, and connected to decisions that leadership can actually make when the numbers move.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="exec-list">
+                <li>Select 2–3 metrics per priority that show actual progress toward the intended outcome</li>
+                <li>Distinguish leading indicators (predictive, earlier signal) from lagging indicators (historical, confirms the outcome)</li>
+                <li>Eliminate any metric that is tracked but has never changed a decision — it adds overhead without insight</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="exec-card">
+            <div class="exec-card-top">
+              <span class="exec-num">Step 05</span>
+              <h2 class="exec-title">Build Accountability Rhythms</h2>
+              <p class="exec-tagline">Execution improves when progress is reviewed consistently — on a cadence, not when someone remembers to schedule it.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="exec-p">Without structured review rhythms, priorities fade into the background of daily operations. Regular reviews create the pressure, visibility, and decision-making speed that keep execution alive through busy periods.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="exec-list">
+                <li>Hold weekly tactical check-ins for active initiatives — short, focused, owner-led</li>
+                <li>Run monthly reviews to assess progress, surface blockers, and reallocate resources where needed</li>
+                <li>Conduct quarterly strategic reviews to evaluate whether the current priorities still match the strategy</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 06 -->
+          <div class="exec-card">
+            <div class="exec-card-top">
+              <span class="exec-num">Step 06</span>
+              <h2 class="exec-title">Adapt and Course-Correct</h2>
+              <p class="exec-tagline">Execution is not about following the plan perfectly. It is about recognizing when the plan needs to change — and changing it.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="exec-p">Every plan degrades as reality unfolds. The organizations that execute best are not the ones who followed the plan most rigidly — they are the ones who recognized the signal early, adapted deliberately, and fed what they learned back into the next cycle.</p>
+            </div>
+            <div class="exec-section">
+              <p class="exec-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="exec-list">
+                <li>Distinguish "off track because of poor execution" from "off track because the plan was wrong" — the response is different</li>
+                <li>Update milestones, owners, and metrics when the business evolves — don't manage to a plan that is no longer real</li>
+                <li>Close the cycle by carrying lessons from this execution period into the next planning round</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /exec-grid -->
+      </div><!-- /exec-outer -->
+
+      <!-- CLOSING PROSE -->
+      <div style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="article-body" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+          <section>
+            <h2>Execution Is the Strategy</h2>
+            <p>The six steps form a cycle, not a checklist. Step 06 feeds back into Step 01. Priorities shift. Owners change. Metrics that mattered last quarter may not matter this quarter. The companies that execute best do not work the cycle once — they run it continuously, getting faster and more accurate with each pass.</p>
+            <p>The gap between strategy and execution is almost always a management discipline gap, not a strategy quality gap. Better execution discipline is the most direct path to better outcomes.</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="article-cta-block">
+        <div class="article-cta-inner">
+          <p class="article-cta-label">Work With BrainBeat</p>
+          <p>Need help converting strategy into accountability systems, clear priorities, and execution rhythms that stick? BrainBeat works with leadership teams to improve planning, execution discipline, and measurable business performance.</p>
+          <a class="btn-primary" href="../#team">Explore C-Suite Services</a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <a class="footer-logo" href="../">
+          <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="footer-logo-img" />
+          <span class="footer-logo-wordmark">BrainBeat LLC<span>.</span></span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#team">Services</a></li>
+          <li><a href="index.html">Insights</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+        <span class="footer-copy">© 2025 BrainBeat LLC &nbsp;·&nbsp; <a href="https://www.digi-noir.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; opacity: 0.5">Design by digi-noir.com</a></span>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("nav-hamburger");
+      const drawer = document.getElementById("nav-drawer");
+      hamburger.addEventListener("click", () => { hamburger.classList.toggle("open"); drawer.classList.toggle("open"); });
+      drawer.querySelectorAll("a").forEach((link) => { link.addEventListener("click", () => { hamburger.classList.remove("open"); drawer.classList.remove("open"); }); });
+    </script>
+  </body>
+</html>

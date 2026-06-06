@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Practical Business Planning Framework for Growing Companies | BrainBeat LLC</title>
+    <meta
+      name="description"
+      content="Six steps to a practical business planning framework: clarify goals, assess the market, know your audience, map competition, build the plan, and iterate."
+    />
+    <meta name="author" content="BrainBeat LLC" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.brainbeatllc.com/insights/business-planning-framework" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Syne+Mono&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* ── HUB DIAGRAM ── */
+      .hub-section {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 2.5rem 5% 1.5rem;
+      }
+      .hub-svg-wrap {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      .hub-svg-wrap svg { width: 100%; height: auto; display: block; }
+
+      /* ── STEP CARDS ── */
+      .steps-outer {
+        padding: 3.5rem 5% 5rem;
+        background: var(--void);
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        background: var(--border);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .step-card {
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid var(--accent);
+      }
+      .step-card-top {
+        padding: 1.8rem 2rem 1.4rem;
+        border-bottom: 1px solid var(--border);
+        background: var(--surface-mid);
+      }
+      .step-num {
+        font-family: "Syne Mono", monospace;
+        font-size: 0.58rem;
+        letter-spacing: 0.22em;
+        color: var(--accent);
+        display: block;
+        margin-bottom: 0.35rem;
+      }
+      .step-title {
+        font-family: "Fraunces", serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+        color: var(--text-pale);
+        letter-spacing: -0.01em;
+        margin-bottom: 0.5rem;
+      }
+      .step-tagline {
+        font-family: "Syne", sans-serif;
+        font-size: 0.83rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        font-style: italic;
+      }
+      .step-section {
+        padding: 1.2rem 2rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .step-section:last-child { border-bottom: none; flex: 1; }
+      .step-lbl {
+        font-family: "Syne", sans-serif;
+        font-size: 0.52rem;
+        font-weight: 700;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        margin-bottom: 0.7rem;
+      }
+      .step-lbl svg { flex-shrink: 0; opacity: 0.85; }
+      .step-p {
+        font-family: "Syne", sans-serif;
+        font-size: 0.835rem;
+        color: var(--text-muted);
+        line-height: 1.72;
+      }
+      .step-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .step-list li {
+        font-family: "Syne", sans-serif;
+        font-size: 0.835rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        display: flex;
+        gap: 0.45rem;
+        align-items: flex-start;
+      }
+      .step-list li::before {
+        content: "›";
+        color: var(--accent);
+        font-size: 1rem;
+        line-height: 1.55;
+        flex-shrink: 0;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 560px) {
+        .steps-grid { grid-template-columns: 1fr; }
+        .step-card { border-top: none; border-left: 2px solid var(--accent); }
+        .step-card-top { padding: 1.4rem 1.5rem 1.1rem; }
+        .step-section { padding: 1rem 1.5rem; }
+        .hub-section { padding: 2rem 5% 1rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#article">Skip to main content</a>
+
+    <!-- NAV -->
+    <nav>
+      <a class="nav-logo" href="../">
+        <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="nav-logo-img" />
+        <span class="nav-logo-text">BrainBeat LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../#about">About</a></li>
+        <li><a href="../#firm">Firm</a></li>
+        <li><a href="../#team">Services</a></li>
+        <li><a href="index.html" class="nav-link-active">Insights</a></li>
+        <li><a href="../#contact">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="../#contact">Begin the Conversation</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-drawer" id="nav-drawer">
+      <a class="nav-drawer-link" href="../#about">About</a>
+      <a class="nav-drawer-link" href="../#firm">Firm</a>
+      <a class="nav-drawer-link" href="../#team">Services</a>
+      <a class="nav-drawer-link" href="index.html">Insights</a>
+      <a class="nav-drawer-link" href="../#contact">Contact</a>
+      <a class="nav-drawer-cta" href="../#contact">Begin the Conversation</a>
+    </div>
+
+    <!-- ARTICLE -->
+    <main class="article-page" id="article">
+
+      <!-- HEADER -->
+      <header class="article-header">
+        <div class="article-header-inner">
+          <a class="article-back" href="index.html">← All Insights</a>
+          <p class="article-eyebrow">Strategic Planning</p>
+          <h1 class="article-h1">A Practical Business Planning Framework<br /><em>for Growing Companies</em></h1>
+          <p class="article-intro">
+            A business plan is not a document — it is a discipline. The companies that plan well do not just write goals down; they build a repeatable process for setting direction, testing assumptions, building the operational plan, and updating it as reality evolves. Six steps form the core of that process.
+          </p>
+        </div>
+      </header>
+
+      <!-- HUB DIAGRAM -->
+      <div class="hub-section">
+        <div class="hub-svg-wrap">
+          <svg viewBox="0 0 900 640" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+            <!-- decorative outer dashed ring -->
+            <circle cx="450" cy="310" r="215" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="3 7"/>
+            <!-- decorative inner ring -->
+            <circle cx="450" cy="310" r="103" fill="none" stroke="var(--border-high)" stroke-width="0.5" stroke-dasharray="2 5"/>
+
+            <!-- spokes (dashed lines from central circle edge, through node, to label zone) -->
+            <line x1="406" y1="234" x2="315" y2="82"  stroke="var(--border-high)" stroke-width="1" stroke-dasharray="5 4"/>
+            <line x1="494" y1="234" x2="585" y2="82"  stroke="var(--border-high)" stroke-width="1" stroke-dasharray="5 4"/>
+            <line x1="362" y1="310" x2="185" y2="310" stroke="var(--border-high)" stroke-width="1" stroke-dasharray="5 4"/>
+            <line x1="538" y1="310" x2="715" y2="310" stroke="var(--border-high)" stroke-width="1" stroke-dasharray="5 4"/>
+            <line x1="406" y1="386" x2="315" y2="538" stroke="var(--border-high)" stroke-width="1" stroke-dasharray="5 4"/>
+            <line x1="494" y1="386" x2="585" y2="538" stroke="var(--border-high)" stroke-width="1" stroke-dasharray="5 4"/>
+
+            <!-- central circle -->
+            <circle cx="450" cy="310" r="88" fill="var(--surface-mid)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="450" y="293" text-anchor="middle" font-family="Fraunces, serif" font-size="13.5" font-weight="300" font-style="italic" fill="var(--text-pale)">Business</text>
+            <text x="450" y="312" text-anchor="middle" font-family="Fraunces, serif" font-size="13.5" font-weight="300" font-style="italic" fill="var(--text-pale)">Planning</text>
+            <text x="450" y="331" text-anchor="middle" font-family="Fraunces, serif" font-size="13.5" font-weight="300" font-style="italic" fill="var(--text-pale)">Framework</text>
+
+            <!-- node circles -->
+            <circle cx="360" cy="154" r="23" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="540" cy="154" r="23" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="270" cy="310" r="23" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="630" cy="310" r="23" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="360" cy="466" r="23" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/>
+            <circle cx="540" cy="466" r="23" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/>
+
+            <!-- node numbers -->
+            <text x="360" y="154" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="13" fill="var(--accent)">01</text>
+            <text x="540" y="154" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="13" fill="var(--accent)">02</text>
+            <text x="270" y="310" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="13" fill="var(--accent)">03</text>
+            <text x="630" y="310" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="13" fill="var(--accent)">04</text>
+            <text x="360" y="466" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="13" fill="var(--accent)">05</text>
+            <text x="540" y="466" text-anchor="middle" dominant-baseline="central" font-family="Syne Mono, monospace" font-size="13" fill="var(--accent)">06</text>
+
+            <!-- step labels -->
+            <text x="308" y="52"  text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Clarify Business</text>
+            <text x="308" y="70"  text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Goals</text>
+
+            <text x="592" y="52"  text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Assess the</text>
+            <text x="592" y="70"  text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Market</text>
+
+            <text x="178" y="303" text-anchor="end"    font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Know Your</text>
+            <text x="178" y="321" text-anchor="end"    font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Audience</text>
+
+            <text x="722" y="303" text-anchor="start"  font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Map the</text>
+            <text x="722" y="321" text-anchor="start"  font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Competition</text>
+
+            <text x="308" y="551" text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Build the</text>
+            <text x="308" y="569" text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Plan</text>
+
+            <text x="592" y="551" text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Iterate &amp;</text>
+            <text x="592" y="569" text-anchor="middle" font-family="Syne, sans-serif" font-size="13" fill="var(--text-muted)">Adapt</text>
+
+          </svg>
+        </div>
+      </div>
+
+      <!-- SIX STEP CARDS -->
+      <div class="steps-outer">
+        <div class="steps-grid">
+
+          <!-- 01 -->
+          <div class="step-card">
+            <div class="step-card-top">
+              <span class="step-num">Step 01</span>
+              <h2 class="step-title">Clarify Business Goals</h2>
+              <p class="step-tagline">Define what success looks like — specifically, measurably, and within a timeframe that leadership can actually plan against.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="step-p">Every planning decision flows from this clarity. Without aligned, clearly stated goals, resource allocation and performance measurement both become arbitrary — and leadership ends up pulling in different directions.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="step-list">
+                <li>Define 3–5 measurable business objectives for the planning period with explicit success metrics</li>
+                <li>Distinguish what needs to happen in the next 90 days from what is a 12–24 month horizon</li>
+                <li>Pressure-test alignment — can every senior leader articulate the top priorities and their rationale?</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 02 -->
+          <div class="step-card">
+            <div class="step-card-top">
+              <span class="step-num">Step 02</span>
+              <h2 class="step-title">Assess the Market</h2>
+              <p class="step-tagline">Understand the external conditions that shape the opportunity — and the real constraints the business is operating within.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="step-p">Strategy without market context is guesswork. Pricing, positioning, and growth assumptions all need to be grounded in what the market will actually support — not what leadership hopes it will.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="step-list">
+                <li>Identify the market trends most likely to affect the business in the planning period</li>
+                <li>Analyze pricing dynamics — where demand sits, what customers pay elsewhere, and what they value most</li>
+                <li>Size the accessible opportunity and identify where realistic growth is most concentrated</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 03 -->
+          <div class="step-card">
+            <div class="step-card-top">
+              <span class="step-num">Step 03</span>
+              <h2 class="step-title">Know Your Audience</h2>
+              <p class="step-tagline">Understand who you serve, what drives their decisions, and why they choose you over the alternatives.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="step-p">Businesses that misunderstand their customers build the wrong products, price incorrectly, and market to the wrong people. Customer clarity is the foundation of the entire commercial strategy.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="step-list">
+                <li>Segment your customer base and identify which segments drive the most value</li>
+                <li>Map the buying journey — who decides, what criteria matter most, and what creates urgency</li>
+                <li>Understand what retains your best customers and what causes you to lose others</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 04 -->
+          <div class="step-card">
+            <div class="step-card-top">
+              <span class="step-num">Step 04</span>
+              <h2 class="step-title">Map the Competition</h2>
+              <p class="step-tagline">Know where you win, where you don't, and why — before the market reveals it for you.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="step-p">You don't need to beat every competitor. You need to know which battles you can win, where your differentiation holds, and where competitive pressure is growing in ways that should shift your strategy.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="step-list">
+                <li>Identify direct and indirect competitors and evaluate how they position and price</li>
+                <li>Honestly assess your points of differentiation — including where they don't hold up under scrutiny</li>
+                <li>Identify where competitive intensity is growing and how that should affect your planning assumptions</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="step-card">
+            <div class="step-card-top">
+              <span class="step-num">Step 05</span>
+              <h2 class="step-title">Build the Plan</h2>
+              <p class="step-tagline">Translate strategy into financial projections, operational priorities, and milestones with clear ownership.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="step-p">Strategy without a plan is aspiration. The plan answers how, by whom, with what resources, and by when — and it connects strategic direction to the budget and to real accountability.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="step-list">
+                <li>Build a financial model connecting strategy to projected revenue, costs, and cash flow</li>
+                <li>Identify the 3–5 operational initiatives that will drive the most meaningful strategic progress</li>
+                <li>Assign clear ownership and milestones to every major initiative in the plan</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 06 -->
+          <div class="step-card">
+            <div class="step-card-top">
+              <span class="step-num">Step 06</span>
+              <h2 class="step-title">Iterate and Adapt</h2>
+              <p class="step-tagline">Build review cycles into the plan so it remains a living document — not something filed after the planning offsite.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Why It Matters
+              </p>
+              <p class="step-p">No plan survives contact with reality unchanged. The organizations that win review honestly, update deliberately, and adjust before conditions force their hand — not after.</p>
+            </div>
+            <div class="step-section">
+              <p class="step-lbl">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                What To Do
+              </p>
+              <ul class="step-list">
+                <li>Establish monthly and quarterly planning reviews on a fixed cadence — not ad hoc</li>
+                <li>Review budget-to-actual variance and understand the why before adjusting forward forecasts</li>
+                <li>Maintain a living version of the plan that reflects the business as it currently is, not as it was planned</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /steps-grid -->
+      </div><!-- /steps-outer -->
+
+      <!-- CLOSING PROSE -->
+      <div style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="article-body" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+          <section>
+            <h2>Planning Is a Process, Not an Event</h2>
+            <p>The companies that use planning most effectively treat it as a continuous operating discipline — not an annual exercise. They move through the six steps, build the plan, and revisit it regularly as they learn more about their market, their customers, and what is actually working.</p>
+            <p>The goal is not a perfect plan. The goal is a leadership team that thinks clearly, decides deliberately, and adjusts intelligently.</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="article-cta-block">
+        <div class="article-cta-inner">
+          <p class="article-cta-label">Work With BrainBeat</p>
+          <p>Need help building a planning process that translates strategy into clear priorities, financial targets, and executable plans? BrainBeat works with leadership teams to improve planning discipline, decision-making, and business performance.</p>
+          <a class="btn-primary" href="../#team">Explore C-Suite Services</a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <a class="footer-logo" href="../">
+          <img src="../brain_and_gears_dark_executive.svg" alt="BrainBeat LLC" class="footer-logo-img" />
+          <span class="footer-logo-wordmark">BrainBeat LLC<span>.</span></span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#team">Services</a></li>
+          <li><a href="index.html">Insights</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+        <span class="footer-copy">© 2025 BrainBeat LLC &nbsp;·&nbsp; <a href="https://www.digi-noir.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; opacity: 0.5">Design by digi-noir.com</a></span>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("nav-hamburger");
+      const drawer = document.getElementById("nav-drawer");
+      hamburger.addEventListener("click", () => { hamburger.classList.toggle("open"); drawer.classList.toggle("open"); });
+      drawer.querySelectorAll("a").forEach((link) => { link.addEventListener("click", () => { hamburger.classList.remove("open"); drawer.classList.remove("open"); }); });
+    </script>
+  </body>
+</html>
